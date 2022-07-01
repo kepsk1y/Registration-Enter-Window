@@ -1,0 +1,87 @@
+// FORM
+
+.form-box {
+  display: flex;
+  align-items: center;
+
+  background-color: $white;
+  height: 100%;
+  width: 50%;
+  box-shadow: 0 5px 45px rgba(0, 0, 0, .2);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  transition: .5s ease-in-out;
+
+  overflow: hidden;
+}
+
+.form-box.active {
+  left: 50%;
+}
+
+// ANIMATION
+
+.form-box.active .form__signin{
+  left: -100%;
+  transition-delay: 0s;
+}
+
+.form-box.active .form__signup{
+  left: 0;
+  transition-delay: .2s;
+}
+
+.form__signin{
+  left: 0;
+  transition-delay: .2s;
+}
+
+.form__signup {
+  left: 100%;
+  transition-delay: 0s;
+}
+
+// STYLES
+
+.form {
+  width: 100%;
+  padding: 150px 90px;
+
+  position: absolute;
+  transition: .5s;
+}
+
+.form__title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: $black;
+}
+
+.form__input {
+  width: 100%;
+  font-size: inherit;
+  border: 1px solid $black;
+  padding: 9px 5px;
+}
+
+.form__btn{
+  border: none;
+  border-radius: 5px;
+  padding: 10px 50px;
+  cursor: pointer;
+  color: $white;
+  background-color: $bg-color;
+  transition: .2s ease-in-out;
+}
+
+.form__btn_signup {
+  background-color: $secondary-bg-color;
+}
+
+.form__forgot {
+  color: $black;
+}
